@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大旗村传奇：叨哥纪实 | 绝密人物档案</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Serif+SC:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Noto Serif SC', 'serif'],
+                    },
+                    colors: {
+                        epic: {
+                            900: '#0f172a', // Deep slate
+                            800: '#1e293b',
+                            gold: '#fbbf24', // Amber 400
+                            light: '#f8fafc',
+                            muted: '#94a3b8'
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .img-zoom-hover {
+            transition: transform 0.5s ease;
+        }
+        
+        .img-container:hover .img-zoom-hover {
+            transform: scale(1.05);
+        }
+
+        /* 新增：强制 1:1 比例容器，确保图片居中裁剪不拉伸 */
+        .aspect-square {
+            aspect-ratio: 1 / 1;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-epic-gold selection:text-epic-900">
+
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-epic-900/80 to-epic-900 z-10"></div>
+            <img src="https://placehold.co/1920x1080/0f172a/1e293b?text=++" class="w-full h-full object-cover opacity-30" alt="Background">
+        </div>
+        
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-epic-gold/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center">
+            <p class="text-epic-gold tracking-[0.3em] uppercase text-sm md:text-base font-semibold mb-4 animate-fade-in-up" style="animation-delay: 0.1s;">
+                广东省肇庆市高要区白土镇·大旗村
+            </p>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-black mb-6 leading-tight animate-fade-in-up" style="animation-delay: 0.3s;">
+                叨哥<span class="text-epic-gold">传</span>奇
+            </h1>
+            <p class="text-lg md:text-2xl text-epic-muted font-light mb-10 max-w-2xl animate-fade-in-up" style="animation-delay: 0.5s;">
+                The Epic Chronicle of Master Dao
+            </p>
+            
+            <a href="#prologue" class="animate-fade-in-up group flex flex-col items-center gap-2 text-epic-muted hover:text-epic-gold transition-colors duration-300" style="animation-delay: 0.8s;">
+                <span class="text-sm tracking-widest uppercase">开启纪实</span>
+                <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            </a>
+        </div>
+    </header>
+
+    <main class="relative z-10 px-4 md:px-8 pb-32">
+        <section id="prologue" class="max-w-6xl mx-auto py-24 reveal">
+            <div class="glass-card rounded-3xl p-8 md:p-12 lg:p-16 flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2 aspect-square img-container rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative">
+                    <img src="paomian.jpg" alt="叨哥吃泡面" class="w-full h-full object-cover img-zoom-hover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                        <p class="text-sm text-epic-gold/80 italic">这张手捧泡面的影像，铭刻着他无上荣光的史诗级定格。</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 space-y-6">
+                    <div class="inline-block px-3 py-1 rounded-full border border-epic-gold/30 text-epic-gold text-xs font-semibold tracking-wider mb-2">
+                        序章 · 旷世奇才
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-serif font-bold text-white">大旗名嘴，<br>降维打击的社交艺术</h2>
+                    <p class="text-epic-muted text-lg leading-relaxed text-justify">
+                        在广东省肇庆市高要区白土镇的大旗村，流传着一个不朽的传说。他，江湖人尊称“叨哥”，自幼骨骼清奇，卓尔不群。
+                    </p>
+                    <p class="text-epic-muted text-lg leading-relaxed text-justify">
+                        作为公认的“大旗名嘴”，他的沟通艺术跨越了岁月的长河，上至八旬老翁，下至三岁黄口，皆能谈笑风生，毫无代沟。他是天生的社交王者，在平凡的世界里，活出了不平凡的自我。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-6xl mx-auto py-24 reveal">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-4">少年统帅与味蕾探险家</h2>
+                <p class="text-epic-muted max-w-2xl mx-auto">做为大师，他更喜欢别人叫他大师。因为这个花名可以让人崇拜，他也沉醉于说教与引领他人前行的感觉。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col items-center text-center group hover:border-epic-gold/50 transition-colors duration-300">
+                    <div class="aspect-square rounded-xl overflow-hidden mb-6 bg-epic-800 border border-white/5 relative">
+                        <img src="qige.jpg" alt="统帅风范" class="w-full h-full object-cover img-zoom-hover">
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">惊天动地的统帅</h3>
+                    <p class="text-epic-muted text-sm leading-relaxed">
+                        作为大旗小学的班长，他时刻散发着领导风范，曾带领一班手下做出诸如“围剿7哥”等震撼历史的壮举。
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col items-center text-center group hover:border-epic-gold/50 transition-colors duration-300">
+                    <div class="aspect-square rounded-xl overflow-hidden mb-6 bg-epic-800 border border-white/5 relative">
+                        <img src="yafeng.jpg" alt="吃货本色" class="w-full h-full object-cover img-zoom-hover">
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">万物皆可“仲有味”</h3>
+                    <p class="text-epic-muted text-sm leading-relaxed">
+                        树叶、遗落的雪糕棍皆可成为味蕾载体。即便是卡在牙缝的午餐余香，重新吞咽后也能深情发出一句：“仲有味~”
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-card rounded-2xl p-6 flex flex-col items-center text-center group hover:border-epic-gold/50 transition-colors duration-300">
+                    <div class="aspect-square rounded-xl overflow-hidden mb-6 bg-epic-800 border border-white/5 relative">
+                        <img src="qiangda.jpg" alt="积极抢答" class="w-full h-full object-cover img-zoom-hover">
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">恩师老李的骄傲</h3>
+                    <p class="text-epic-muted text-sm leading-relaxed">
+                        课堂上的他积极抢答，是老李最偏爱的学生。这种优良的品质，如同他刻在骨子里的DNA，一直延续至今。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-6xl mx-auto py-24 reveal">
+            <div class="glass-card rounded-3xl p-8 md:p-12 border-l-4 border-l-blue-500 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
+                
+                <div class="flex flex-col md:flex-row gap-12 items-center relative z-10">
+                    <div class="md:w-1/2 space-y-6">
+                        <div class="inline-block px-3 py-1 rounded-full border border-blue-400/30 text-blue-400 text-xs font-semibold tracking-wider mb-2">
+                            进阶篇 · 赛博霸主
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-white">大湾区交际花与<br>伟大的电竞之神</h2>
+                        <p class="text-epic-muted leading-relaxed">
+                            升入白土镇第二小学后，他无处安放的魅力开始四溢，那些年标志性的“拍照嘟嘴”见证了他的青葱岁月，也为日后叱咤粤港澳大湾区积累了深厚的人脉基石。
+                        </p>
+                        <p class="text-epic-muted leading-relaxed">
+                            当智能手机时代全面降临，身披RGB渐变战袍的他，正式宣告了统治力的到来。伟大的游戏竞技手就此启航，每一次斩获胜利的瞬间，他都尽情享受着王者之巅的极致喜悦。
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                        <div class="space-y-4 pt-8">
+                            <div class="aspect-square rounded-xl shadow-lg border border-white/10 overflow-hidden">
+                                <img src="kannimao.png" alt="青年时代" class="w-full h-full object-cover">
+                            </div>
+                            <div class="aspect-square rounded-xl shadow-lg border border-white/10 overflow-hidden">
+                                <img src="RGB.jpg" alt="玩手机" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="aspect-square rounded-xl shadow-lg border border-white/10 overflow-hidden">
+                                <img src=shengli.jpg alt="赢下游戏" class="w-full h-full object-cover">
+                            </div>
+                            <div class="aspect-square rounded-xl shadow-lg border border-white/10 overflow-hidden">
+                                <img src=duizui.jpg alt="嘟嘴" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="max-w-5xl mx-auto py-24">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-4">情海浮沉：大师的孤独与浪漫</h2>
+                <div class="w-24 h-1 bg-epic-gold mx-auto rounded-full mb-6"></div>
+                <p class="text-epic-muted">学生生涯结束，凡尘的羁绊悄然而至。大师的情感宇宙，就此迎来剧烈震荡。</p>
+            </div>
+
+            <div class="space-y-24 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/20 before:to-transparent">
+                
+                <!-- Timeline Item 1 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group reveal">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-epic-900 bg-pink-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl border-l-4 border-l-pink-500">
+                        <h3 class="font-bold text-xl text-white mb-2">初恋的余烬</h3>
+                        <p class="text-epic-muted text-sm mb-4">这是第一次开启甜甜蜜蜜的爱情，令人振奋。然而遗憾的是，这场未能紧握的爱情长跑仅仅维持了一年，便化作了他终身的痛。</p>
+                        <div class="aspect-square rounded-lg overflow-hidden">
+                            <img src="CHULIAN.jpeg" alt="初恋" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group reveal">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-epic-900 bg-orange-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl border-l-4 border-l-orange-500">
+                        <h3 class="font-bold text-xl text-white mb-2">化身暴躁炮仗</h3>
+                        <p class="text-epic-muted text-sm mb-4">不再相信爱情的他，将全部灵魂倾注于工作。但这极端的投入让他变得如同炮仗一般，一点就着。直到身边人纷纷避让，他才开始停下脚步反思自我。</p>
+                        <div class="aspect-square rounded-lg overflow-hidden">
+                            <img src="BAOZAO.jpg" alt="工作" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group reveal">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-epic-900 bg-red-500 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-card p-6 rounded-2xl border-l-4 border-l-red-500">
+                        <h3 class="font-bold text-xl text-white mb-2">难明的“jue”的一下</h3>
+                        <p class="text-epic-muted text-sm mb-4">第二段感情如曙光般降临，一起干饭、等下班，他以为再次拥有了全世界。然而，一张合影成了命运转折点，感情遭遇重重不顺，最终彻底破裂。</p>
+                        <div class="aspect-square rounded-lg overflow-hidden">
+                            <img src="nanming.jpg" alt="难明" class="w-full h-full object-cover">
+                        </div>
+                        <p class="mt-4 text-white font-serif italic text-sm text-center">“他不明白，为什么一点那么简单的事，jue的一下子就没了后续...”</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <section class="max-w-4xl mx-auto text-center py-20 reveal">
+            <div class="p-[2px] rounded-2xl bg-gradient-to-r from-transparent via-epic-gold to-transparent opacity-80">
+                <div class="bg-epic-900 rounded-2xl p-10 md:p-16">
+                    <h2 class="text-2xl md:text-4xl font-serif font-bold text-white mb-6">传奇，未完待续</h2>
+                    <p class="text-epic-muted text-lg mb-8 leading-relaxed">
+                        岁月不居，时节如流。<br>那个连落叶与雪糕棍都能品出“仲有味”的乐观大师，绝不会被短暂的情伤击垮。
+                    </p>
+                    <p class="text-epic-gold font-bold text-xl animate-pulse">
+                        愿我们尽快见证大师，步入轰轰烈烈的第三段恋情！
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-white/10 py-8 text-center text-epic-muted text-sm relative z-10 bg-epic-900">
+        <p>© 2026 大旗村史册委员会 | 叨哥档案局</p>
+        <p class="mt-2 opacity-50">本页面文案与设计已由 AI 进行了史诗级强化</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealElements = document.querySelectorAll('.reveal');
+
+            const revealCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            };
+
+            const revealOptions = {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
+
+            revealElements.forEach(el => revealObserver.observe(el));
+        });
+    </script>
+</body>
+</html>
